@@ -1,6 +1,6 @@
 # DB設計
 
-## groups_users table
+## group_users table
 
 |Column|Type|Options|
 |------|----|-------|
