@@ -1,0 +1,17 @@
+.chat-side
+  .side-header
+    .side-header__box
+      .side-header__box__name Iseya Shota
+      .side-header__box__menu
+        %ul.header__lists
+          %li.list__edit
+            = link_to "#",class:"icon-color" do
+              = icon('fas','edit')
+          %li.list__cog
+            = link_to "#",class:"icon-color" do
+              = icon('fas','cog')
+  .groups
+    = link_to "#", class:"group" do
+      .group__name a
+      .group__message まだメッセージはありません。
+
