@@ -3,29 +3,29 @@
   width: 300px;
   height: 100%;
   color: white;
-}
-.chat-side .side-header {
-  background-color: #253141;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-}
-.chat-side .side-header__box{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  font-weight: bold;
-}
-.chat-side .side-header__box__menu{
-  display: flex;
-}
-ul.header__lists{
+  .side-header {
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    .side-header__box{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+        &__menu{
+          display: flex;
+        }
+      }
+    }
+  }
+.header__lists{
   display: flex;
   color: #ffffff;
-}
-.list__edit{
-  margin-left: 0.3rem;
+  .list__edit{
+    margin-left: 0.3rem;
+  }
 }
 .list__cog{
   margin-left: 0.3rem;
@@ -33,18 +33,18 @@ ul.header__lists{
 .icon-color{
   color: white;
 }
-.chat-side .groups {
+.groups {
   height: calc(100vh - 100px);
   background-color: #2f3e51;
   padding: 20px 20px 0;
   overflow: scroll;
-}
-.group{
-  text-decoration: none;
-}
-.group__name{
-  color: #fff;
-  font-size: 15px;
+  .group{
+    text-decoration: none;
+    &__name{
+      color: #fff;
+      font-size: 15px;
+    }
+  }
 }
 .group__message{
   color: #fff;
