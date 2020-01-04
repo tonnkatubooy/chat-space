@@ -6,13 +6,14 @@
       .side-header__box__menu
         %ul.header__lists
           %li.list__edit
-            = link_to "#",class:"icon-color" do
+            = link_to new_group_path,class:"icon-color" do
               = icon('fas','edit')
           %li.list__cog
             = link_to edit_user_path(current_user),class:"icon-color" do
               = icon('fas','cog')
   .groups
-    = link_to "#", class:"group" do
-      .group__name a
-      .group__message まだメッセージはありません。
-      
+    - current_user.groups.each do |group|
+      .group
+        = link_to '/groups/1/edit' do
+          .group__name = group.name 
+          .group__message メッセージはまだありません。
