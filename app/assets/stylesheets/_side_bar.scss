@@ -40,6 +40,8 @@
   overflow: scroll;
   .group{
     text-decoration: none;
+    box-sizing: border-box;
+    padding: 20px 0 40px;
     &__name{
       color: #fff;
       font-size: 15px;
