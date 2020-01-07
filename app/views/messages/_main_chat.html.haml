@@ -6,18 +6,18 @@
     = link_to "#",class:"edit--btn" do
       .main-header__edit-btn Edit
   .messages
-    = render @message
+    = render @messages
     .message
       .message__upper-info
-        %p.message__upper-info__talker Iseya Shota
-        %p.message__upper-info__date 2019/12/22(Sun) 12:33:00
-      %p.message__text よろしくです
+        %p.message__upper-info__talker 
+        %p.message__upper-info__date 
+      %p.message__text 
   .form
     = form_for [@group, @message] do |f|
       .input-box
         = f.text_field :content, class: "input-box__text"
-        =f.label :message_image, class: "input-btn__image" do
-          = f.icon 'fas', 'image'
+        =f.label :message_image, class: "input-box__image" do
+          = icon 'fas', 'image'
           = f.file_field :image, class: "input-box__image__file"
       = f.submit 'Send', class: 'form__submit'
 
