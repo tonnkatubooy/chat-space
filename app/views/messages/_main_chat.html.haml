@@ -6,16 +6,25 @@
     = link_to "#",class:"edit--btn" do
       .main-header__edit-btn Edit
   .messages
+    = render @message
     .message
       .message__upper-info
         %p.message__upper-info__talker Iseya Shota
         %p.message__upper-info__date 2019/12/22(Sun) 12:33:00
       %p.message__text よろしくです
   .form
-    %form.new_message
+    = form_for [@group, @message] do |f|
       .input-box
-        %input{placeholder: "type a message", class: "input-box__text", type: "text", name: "message[content]", id: "message_content" }
-        %label{class: "input-box__image", for: "message_image"}
-          = icon('fas', 'image')
-          %input{class: "input-box__image__file", type: "file", name: "message[image]", id: "message_image"}
-      %input{type: "submit", name: "commit", value: "Send", class: "submit-btn", with: "Send"}
+        = f.text_field :content, class: "input-box__text"
+        =f.label :message_image, class: "input-btn__image" do
+          = f.icon 'fas', 'image'
+          = f.file_field :image, class: "input-box__image__file"
+      = f.submit 'Send', class: 'form__submit'
+
+    -# %form.new_message
+    -#   .input-box
+    -#     %input{placeholder: "type a message", class: "input-box__text", type: "text", name: "message[content]", id: "message_content" }
+    -#     %label{class: "input-box__image", for: "message_image"}
+    -#       = icon('fas', 'image')
+    -#       %input{class: "input-box__image__file", type: "file", name: "message[image]", id: "message_image"}
+    -#   %input{type: "submit", name: "commit", value: "Send", class: "submit-btn", with: "Send"}
