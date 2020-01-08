@@ -13,16 +13,16 @@
     border-bottom: solid 1px #eee;
     overflow: scroll;
     widows: 100%;
-    &__edit-btn{
-      height: 40px;
-        line-height: 40px;
-        padding: 0 20px;
-        margin-top: 30px;
-        border: solid 1px #38aef0;
-        position: absolute;
-        right: 40px;
-    }
   }
+}
+.edit{
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  margin-top: 30px;
+  border: solid 1px #38aef0;
+  position: absolute;
+  right: 40px;
 }
 .main-header__left-box{
   margin-top: 35px;
@@ -47,10 +47,10 @@
   overflow: scroll;
   .message{
     padding-bottom: 40px;
-    .message__upper-info{
+    .upper-message{
       display: flex;
       margin-bottom: 10px;
-      &__talker{
+      &__user-name{
         color: #434a54;
         font-size: 16px;
         font-weight: bold;
@@ -58,12 +58,12 @@
     }
   }
 }
-.message__upper-info__date{
+.upper-message__date{
   color: #999999;
   font-size: 12px;
   margin-left: 10px;
 }
-.message__text{
+.lower-message{
   color: #434a54;
   font-size: 14px;
   margin-bottom: 10px;
@@ -97,7 +97,7 @@
     display: none;
   }
 }
-.submit-btn{
+.form__submit{
   width: 100px;
   height: 50px;
   padding: 0 30px;
