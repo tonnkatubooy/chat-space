@@ -19,7 +19,7 @@
   .form
     = form_for [@group, @message] do |f|
       .input-box
-        = f.text_field :content, class: "input-box__text"
+        = f.text_field :content, class: "input-box__text", placeholder: 'type a message'
         =f.label :message_image, class: "input-box__image" do
           = icon 'fas', 'image'
           = f.file_field :image, class: "input-box__image__file"
