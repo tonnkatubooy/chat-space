@@ -24,11 +24,3 @@
           = icon 'fas', 'image'
           = f.file_field :image, class: "input-box__image__file"
       = f.submit 'Send', class: 'form__submit'
-
-    -# %form.new_message
-    -#   .input-box
-    -#     %input{placeholder: "type a message", class: "input-box__text", type: "text", name: "message[content]", id: "message_content" }
-    -#     %label{class: "input-box__image", for: "message_image"}
-    -#       = icon('fas', 'image')
-    -#       %input{class: "input-box__image__file", type: "file", name: "message[image]", id: "message_image"}
-    -#   %input{type: "submit", name: "commit", value: "Send", class: "submit-btn", with: "Send"}
