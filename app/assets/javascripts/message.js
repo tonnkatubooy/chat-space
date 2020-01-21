@@ -30,7 +30,6 @@ $(function(){
   })
 
 var buildHTML = function(message) {
-        `</p>` +
   var content = message.content ? `${ message.content }` : "";
     var img = message.image ? `<img src= ${ message.image }>` : "";
     var html = `<div class="message" data-id="${message.id}">
