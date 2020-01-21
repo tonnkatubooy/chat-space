@@ -76,7 +76,7 @@ var buildHTML = function(message) {
       <div class="lower-message">
         <img src=" message.image " class="lower-message__image" >
       </div>
-    </div>
+    </div>`
   };
   return html;
 };
