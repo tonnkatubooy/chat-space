@@ -30,56 +30,26 @@ $(function(){
   })
 
 var buildHTML = function(message) {
-  if (message.content && message.image) {
-    var html = `<div class="message" data-message-id=` message.id `>`
-      `<div class="upper-message">`
-        `<div class="upper-message__user-name">`
-          message.user_name
-        `</div>`
-        `<div class="upper-message__date">`
-          message.created_at
-        `</div>`
-      `</div>`
-      `<div class="lower-message">`
-        `<p class="lower-message__content">`
-          message.content 
-        `</p>` 
-        `<img src="` message.image `" class="lower-message__image" >`
-      `</div>` 
-    `</div>`
-  } else if (message.content) {
-    var html = `<div class="message" data-message-id=` message.id `>`
-      `<div class="upper-message">`
-        `<div class="upper-message__user-name">`
-          message.user_name
-        `</div>` 
-        `<div class="upper-message__date">`
-          message.created_at
-        `</div>`
-      `</div>` 
-      `<div class="lower-message">`
-        `<p class="lower-message__content">`
-          message.content
-        `</p>`
-      `</div>`
-    `</div>`
-  } else if (message.image) {
-    var html = `<div class="message" data-message-id=` message.id `>`
-      `<div class="upper-message">`
-        `<div class="upper-message__user-name">`
-          message.user_name
-        `</div>`
-        `<div class="upper-message__date">`
-          message.created_at
-        `</div>` 
-      `</div>`
-      `<div class="lower-message">`
-        `<img src="` message.image `" class="lower-message__image" >`
-      `</div>`
-    `</div>`
-  };
-  return html;
-};
+  image = (message.image) ? `<img class= "lower-message__image" src=${message.image} >` : ""; //三項演算子を使ってmessage.imageにtrueならHTML要素、faiseなら空の値を代入。
+
+    var html = `<div class="message" data-message-id="${message.id}"> 
+          <div class="upper-message">
+            <div class="upper-message__user-name">
+              ${message.user_name}
+            </div>
+            <div class="upper-message__date">
+              ${message.date}
+            </div>
+          </div>
+          <div class="lower-meesage">
+            <p class="lower-message__content">
+              ${message.content}
+            </p>
+            ${image}
+          </div>
+        </div>`
+    return html;
+  }
 
 $('#new_message').on('submit', function(e){
   console.log("aa")
