@@ -1,3 +1,9 @@
+# チャット形式のアプリケーション（carriewaveによる画像投稿可能)
+
+![image](https://user-images.githubusercontent.com/58540888/83344285-923d9d00-a33f-11ea-9e3d-2c8503170edf.png)
+
+## 開発環境
+
 # DB設計
 
 ## group_users table
